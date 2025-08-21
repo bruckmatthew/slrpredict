@@ -14,7 +14,12 @@ header {
 }
 
 .h2 {
-  font-size: 3.5rem;
+  font-size: 4rem;
+}
+
+.key-features h2 {
+    margin-top: 1rem;    /* Reduce space above */
+    margin-bottom: 2.5rem; /* Increase space below */
 }
 
 main {
