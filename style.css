@@ -14,11 +14,11 @@ header {
 }
 
 .h2 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .key-features h2 {
-    margin-top: 1rem;    /* Reduce space above */
+    margin-top: 0rem;    /* Reduce space above */
     margin-bottom: 2.5rem; /* Increase space below */
 }
 
