@@ -98,9 +98,12 @@ main {
   }
 
 .feature-img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 180px;              /* Set your desired height */
+    object-fit: cover;          /* Crop to fill the box */
+    object-position: top;       /* Crop from the top */
     border-radius: 4px;
+    display: block;
 }
 
   .hero {
