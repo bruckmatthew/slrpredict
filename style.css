@@ -137,10 +137,24 @@ main {
     margin: 0 auto;
   }
 
-  .bannerimage {
+.bannerimage {
+    width: 100vw;
+    max-width: 100%;
+    height: 320px; /* adjust as needed for 'air' */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: calc(-1 * (100vw - 100%) / 2); /* removes section padding for full bleed */
+    position: relative;
+}
+
+.bannerimage img {
     width: 100%;
-    height: 405px;
-  }
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 section {
     margin: 2rem auto;
