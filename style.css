@@ -91,7 +91,13 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
-  
+
+.feature-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
   .hero {
     background-image: url('assets/images/hero-bg.jpg');
     background-size: cover;
