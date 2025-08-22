@@ -126,6 +126,8 @@ main {
     z-index: 0;
     pointer-events: none;
     user-select: none;
+    /* Optional: add a white overlay for readability */
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95));
 }
   
   .hero::before {
@@ -340,10 +342,10 @@ footer {
   text-decoration: none;
 }
 
-/* --- SLRLearn Page Styles --- */
+/* --- SLRLearn Page Styles (Unified Colour Scheme) --- */
 .slrlearn-body {
-    background: #f8f9fa;
-    color: #222;
+    background: #f6f6f6;
+    color: #333;
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
 }
@@ -353,26 +355,46 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 60px 5% 60px 5%;
-    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('../slrlearn/hero-bg.jpg') center/cover no-repeat;
     min-height: 350px;
     overflow: hidden;
+    background: none; /* Remove background image/gradient */
+}
+.slrlearn-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    /* Optional: subtle overlay for readability */
+}
+.slrlearn-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(60, 88, 60, 0.55); /* green overlay for contrast */
+    z-index: 1;
+}
+.slrlearn-hero-content,
+.slrlearn-hero-image {
+    position: relative;
+    z-index: 2;
 }
 .slrlearn-hero-content {
     max-width: 500px;
-    z-index: 2;
 }
 .slrlearn-hero h1 {
     font-size: 2.8rem;
     margin-bottom: 0.5em;
-    color: #1a3d6d;
+    color: #fff;
 }
 .slrlearn-hero p {
     font-size: 1.2rem;
     margin-bottom: 1.5em;
-    color: #444;
+    color: #fff;
 }
-.slrlearn-hero .slrlearn-cta-btn {
-    background: #1a3d6d;
+.slrlearn-cta-btn {
+    background: #3C583C;
     color: #fff;
     padding: 0.8em 2em;
     border: none;
@@ -380,16 +402,12 @@ footer {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
-.slrlearn-hero .slrlearn-cta-btn:hover {
-    background: #23508e;
-}
-.slrlearn-hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 2;
+.slrlearn-cta-btn:hover {
+    background: #667545;
 }
 .slrlearn-hero-image img {
     max-width: 340px;
@@ -405,7 +423,7 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 .slrlearn-section h2 {
-    color: #1a3d6d;
+    color: #3C583C;
     margin-bottom: 0.5em;
 }
 .slrlearn-modules-list {
@@ -415,7 +433,7 @@ footer {
     margin-top: 24px;
 }
 .slrlearn-module-card {
-    background: #f4f7fb;
+    background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     flex: 1 1 320px;
@@ -436,10 +454,10 @@ footer {
 }
 .slrlearn-module-card h3 {
     margin: 0 0 10px 0;
-    color: #23508e;
+    color: #3C583C;
 }
 .slrlearn-module-card p {
-    color: #444;
+    color: #333;
     font-size: 1rem;
     text-align: center;
 }
@@ -462,11 +480,11 @@ footer {
     text-align: center;
 }
 .slrlearn-upcoming-section h3 {
-    color: #1a3d6d;
+    color: #3C583C;
     margin-bottom: 0.5em;
 }
 .slrlearn-upcoming-section p {
-    color: #444;
+    color: #333;
     font-size: 1.05rem;
 }
 .slrlearn-bottom-cta {
@@ -475,7 +493,7 @@ footer {
     padding: 40px 0 60px 0;
 }
 .slrlearn-bottom-cta .slrlearn-cta-btn {
-    background: #1a3d6d;
+    background: #3C583C;
     color: #fff;
     padding: 1em 2.5em;
     border: none;
@@ -485,17 +503,7 @@ footer {
     transition: background 0.2s;
 }
 .slrlearn-bottom-cta .slrlearn-cta-btn:hover {
-    background: #23508e;
-}
-@media (max-width: 900px) {
-  .products {
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-card {
-    max-width: 95vw;
-    width: 100%;
-  }
+    background: #667545;
 }
 @media (max-width: 900px) {
     .slrlearn-hero {
