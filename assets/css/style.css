@@ -444,7 +444,10 @@ footer {
     align-items: center;
     padding: 24px;
     margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
 }
+
 .slrlearn-module-card img {
     width: 100%;
     max-width: 220px;
