@@ -181,7 +181,7 @@ section {
     margin: 2rem auto;
     padding: 2rem;
     width: 80%;
-    max-width: 900px;
+    /* max-width: 900px; */
     text-align: center;
   }
 
@@ -533,8 +533,8 @@ footer {
     margin: 0 !important;
     padding: 32px 2vw;
   }
-
-  .products {
+  
+  /* .products {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -549,7 +549,7 @@ footer {
   }
   .product-card-content {
     padding: 1.2rem;
-  }
+  } */
 }
 
 @media (max-width: 900px) {
