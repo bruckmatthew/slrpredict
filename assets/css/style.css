@@ -21,11 +21,11 @@ video {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 .key-features h2 {
@@ -251,10 +251,16 @@ footer {
     align-items: center;
     justify-content: center;
     color: #fff;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.541);
     z-index: 2;
     text-align: center;
     padding: 2rem;
+}
+
+.banner-learnmore-content a {
+    color: #d6f91d; /* or your preferred color */
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 .products {
@@ -347,8 +353,9 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px 5% 60px 5%;
+    justify-content: center; /* center both items */
+    gap: 2.5rem;             /* add a gap between text and image */
+    padding: 60px 2rem;      /* reduce horizontal padding */
     min-height: 350px;
     overflow: hidden;
     background: none; /* Remove background image/gradient */
@@ -423,6 +430,7 @@ footer {
     gap: 32px;
     flex-wrap: wrap;
     margin-top: 24px;
+    justify-content: center
 }
 .slrlearn-module-card {
     background: #f9f9f9;
@@ -456,12 +464,20 @@ footer {
     width: 100%;
     margin: 32px 0;
     text-align: center;
-}
-.slrlearn-banner-section img {
-    width: 90%;
-    max-width: 900px;
+    height: 220px; /* Set your desired banner height */
+    overflow: hidden;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.slrlearn-banner-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
 }
 .slrlearn-upcoming-section {
     padding: 32px 5%;
@@ -495,9 +511,10 @@ footer {
     background: #667545;
 }
 
-/* Responsive for mobile */
-@media (max-width: 700px) {
-  .who-for-container {
+
+
+@media (max-width: 900px) {
+    .who-for-container {
     flex-direction: column;
   }
   .who-for-image img {
@@ -534,7 +551,7 @@ footer {
     padding: 32px 2vw;
   }
   
-  /* .products {
+  .products {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -549,10 +566,7 @@ footer {
   }
   .product-card-content {
     padding: 1.2rem;
-  } */
-}
-
-@media (max-width: 900px) {
+  }
     .slrlearn-hero {
         flex-direction: column;
         text-align: center;
