@@ -282,11 +282,11 @@ footer {
   border-radius: 16px;
   overflow: hidden;
   text-decoration: none;
-  color: #fff;
+  color: #111;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1.5px 4px rgba(0,0,0,0.03);
   transition: box-shadow 0.2s, transform 0.2s;
   margin: 0.5rem;
-  background: #222;
+  background: #f8f8f8;
 }
 
 .product-card-bg {
@@ -294,8 +294,7 @@ footer {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7);
-  transition: filter 0.2s;
+  opacity: 0.18;
   z-index: 1;
 }
 
@@ -303,11 +302,13 @@ footer {
   position: relative;
   z-index: 2;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .product-card h2 {
   margin: 0 0 0.7rem 0;
+  color: #111;
+  text-decoration: none;  
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -315,6 +316,8 @@ footer {
 
 .product-card p {
   margin: 0;
+  color: #111;
+  text-decoration: none;  
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -325,7 +328,16 @@ footer {
 }
 
 .product-card:hover .product-card-bg {
-  filter: brightness(0.5) blur(1px);
+  opacity: 0.28;
+  filter: blur(1px);
+}
+
+/* Remove link styles on hover/focus */
+.product-card:focus,
+.product-card:active,
+.product-card:hover {
+  outline: none;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
